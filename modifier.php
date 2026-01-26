@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-// Récupérer l'id du livre depuis l'URL
+//  l'id du livre depuis l'URL
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 

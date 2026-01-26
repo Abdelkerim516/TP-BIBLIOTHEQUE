@@ -2,7 +2,7 @@
 include 'db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // les données du formulaire
+    // les donnees du formulaire
     $id = $_POST['id'];
     $titre = $_POST['titre'];
     $auteur = $_POST['auteur'];

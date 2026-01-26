@@ -5,7 +5,7 @@ $pass = "root";
 $dbname = "Bibliotheque";
 
 try {
-    // On utilise PDO, c'est plus moderne et sécurisé que mysqli
+    // on utilise PDO, c'est plus securise que mysqli
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {

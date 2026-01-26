@@ -9,29 +9,29 @@
 <body>
 
     <div class="sidebar">
-        <h2>GESTION BIBLIO</h2>
-        <a href="index.php?page=ajouter">➕ Ajouter un Livre</a>
-        <a href="index.php?page=modifier">✏️ Modifier un Livre</a>
-        <a href="index.php?page=supprimer">🗑️ Supprimer un Livre</a>
-        <a href="index.php?page=emprunter">📖 Emprunter un Livre</a>
-        <a href="index.php" style="margin-top: auto; background: #2a4870;">⬅️ Retour à l'Accueil</a>
+        <h2>GESTION BIBLIOTHÉQUE</h2>
+        <a href="index.php?page=ajouter">Ajouter un Livre</a>
+        <a href="index.php?page=liste">Modifier un Livre</a>
+        <a href="index.php?page=liste">Supprimer un Livre</a>
+        <a href="index.php?page=emprunter">Emprunter un Livre</a>
+        <a href="index.php" style="margin-top: auto; background: #2a4870;">Retour à l'Accueil</a>
     </div>
 
    <div class="main-content">
     <div class="card">
         <?php 
-        // On récupère le nom de la page dans l'URL (ex: ?page=ajouter)
         $page = isset($_GET['page']) ? $_GET['page'] : 'liste';
 
-        // On vérifie si le fichier existe avant de l'inclure
         if ($page == 'ajouter') {
             include 'form_ajouter.php'; 
         } elseif ($page == 'liste') {
-            include 'liste.php'; // Ce fichier doit contenir le SELECT
+            include 'liste.php';
         } elseif ($page == 'modifier') {
-            include 'modifier.php'; // Étape 4 de votre document
+            include 'modifier.php';
         } elseif ($page == 'supprimer') {
-            include 'supprimer.php'; // Étape 7 de votre document
+            include 'supprimer.php';
+        } elseif ($page == 'emprunter') {
+            include 'emprunter.php'; 
         } else {
             echo "<h3>Bienvenue</h3><p>Choisissez une option à gauche.</p>";
         }
